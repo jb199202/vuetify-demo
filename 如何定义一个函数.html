@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<script src="https://cdn.staticfile.org/vue/2.7.0/vue.min.js"></script>
+<div id="app">
+  <h1></h1>
+  <h1>名字：{{ arabicName }} 长度：{{ calculate_Length(arabicName) }}</h1>
+  <p>{{ a.abc.name }}</p>
+  <p>{{ a.abc.gender }}</p>
+  <p>{{ a.abc2 }}</p>
+  <p>{{ a.abc3.length }}</p>
+  <p>{{ a.a4 }}</p>
+  <p>{{ a.xiao5 }}</p>
+  <p>{{ a.da6 }}</p>
+</div>
+
+<script>
+new Vue({
+  el: '#app',
+  data: {
+    arabicName: 'Al-Kindi',
+    a: {
+      abc: {
+        name: '小草',
+        gender: '女'
+      },
+      abc2: '这个变量名叫abc2',
+      abc3: '这是我瞎起的变量名abc3',
+      a4: '这是a4',
+      xiao5: '这是xiao5',
+      da6: '这是da6',
+    }
+  }
+  ,
+  methods: {
+    calculate_Length(x) {
+      return x.length;
+    }
+    ,
+  }
+})
+</script>
+</html>
